@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CADD Arabia | Contact Us</title>
+    <link rel="icon" href="images/cadd_arabia_fav_icon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .page-header {
+            margin-top: 70px;
+            padding: 60px 0;
+            background-color: var(--light-gray);
+            text-align: center;
+        }
+
+        .contact-container {
+            padding: 80px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info h2 {
+            font-size: 2rem;
+            color: var(--secondary-red);
+            margin-bottom: 20px;
+        }
+
+        .info-item {
+            margin-bottom: 30px;
+        }
+
+        .info-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: var(--text-dark);
+        }
+
+        .info-item p {
+            color: #666;
+        }
+
+        .contact-form {
+            background-color: #FAFAFA;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            height: 150px;
+        }
+
+        .submit-btn {
+            background-color: var(--secondary-red);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--accent-red-hover);
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/cadd_arabia_logo.png" alt="CADD Arabia">
+            </a>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <div class="dropdown">
+                    <a href="products.html" class="dropbtn">Products</a>
+                    <div class="dropdown-content">
+                        <!-- Security Systems -->
+                        <div class="dropdown-submenu">
+                            <a href="#">Security Systems</a>
+                            <div class="dropdown-content">
+                                <a href="products.html#salto">SALTO</a>
+                            </div>
+                        </div>
+                        <!-- Audio Visual -->
+                        <div class="dropdown-submenu">
+                            <a href="#">Audio Visual Solutions</a>
+                            <div class="dropdown-content">
+                                <a href="products.html#peoplelink">People Link</a>
+                                <a href="products.html#mvi">MVI</a>
+                            </div>
+                        </div>
+                        <!-- Networking -->
+                        <div class="dropdown-submenu">
+                            <a href="#">Networking & Infrastructure</a>
+                            <div class="dropdown-content">
+                                <!-- Active -->
+                                <div class="dropdown-submenu">
+                                    <a href="#">Active</a>
+                                    <div class="dropdown-content">
+                                        <a href="products.html#bdcom">BDCOM</a>
+                                    </div>
+                                </div>
+                                <!-- Passive -->
+                                <div class="dropdown-submenu">
+                                    <a href="#">Passive</a>
+                                    <div class="dropdown-content">
+                                        <a href="products.html#xelcon">Xelcon Networks UK</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio Dropdown -->
+                <!-- <div class="dropdown">
+                    <a href="portfolio.html" class="dropbtn">Portfolio</a>
+                    <div class="dropdown-content">
+                        <a href="portfolio.html#ongoing">Ongoing Projects</a>
+                        <a href="portfolio.html#done">Completed Projects</a>
+                    </div>
+                </div> -->
+                <a href="blog.html">News Feed</a>
+                <a href="index.html#solutions">Solutions</a>
+                <a href="contact.html" style="color: var(--secondary-red);">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+        </div>
+    </div>
+
+    <!-- Contact Content -->
+    <div class="container contact-container">
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p style="margin-bottom: 40px;">Have questions about our solutions? Reach out to us directly or fill out the
+                form.</p>
+
+            <div class="info-item">
+                <h4>Address</h4>
+                <p>CADD Arabia Head Office<br>4th Floor, Al Muftah Plaza. Al Rayyan Road<br>Doha, Qatar. PO 11126.</p>
+            </div>
+
+            <div class="info-item">
+                <h4>Email</h4>
+                <p>info@caddarabia.com<br>sales@caddarabia.com<br>support@caddarabia.com</p>
+            </div>
+
+            <div class="info-item">
+                <h4>Phone</h4>
+                <p>+974 4425 1401<br>+974 4425 1413</p>
+            </div>
+            <div class="info-item">
+                <h4>Fax</h4>
+                <p>+974 4435 7022</p>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="from_name" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="from_email" class="form-control" placeholder="Your Email"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" class="form-control" placeholder="How can we help?"
+                        required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <img src="images/cadd_arabia_logo_white.png" alt="CADD Arabia">
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/company/caddarabia/" target="_blank">LinkedIn</a>
+                <a href="#">Twitter</a>
+                <a href="#">Facebook</a>
+            </div>
+            <div class="footer-contact">
+                <p>Contact Us</p>
+                <p>info@caddarabia.com<br>sales@caddarabia.com</p>
+            </div>
+            <!-- Location Map -->
+            <div class="footer-map">
+                <iframe
+                    src="https://maps.google.com/maps?q=25.289877869788718,51.51050736262315&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 CADD Arabia. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('OFdqFZrk5z1Mnhl5U'); // REPLACE WITH YOUR PUBLIC KEY
+        })();
+    </script>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // these IDs from the previous steps
+            const serviceID = 'service_yvq4uhn'; // REPLACE WITH YOUR SERVICE ID
+            const templateID = 'template_ririuf8'; // REPLACE WITH YOUR TEMPLATE ID
+
+            const btn = document.querySelector('.submit-btn');
+            const originalBtnText = btn.innerText;
+            btn.innerText = 'Sending...';
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    btn.innerText = originalBtnText;
+                    alert('Message sent successfully!');
+                    document.getElementById('contact-form').reset();
+                }, (err) => {
+                    btn.innerText = originalBtnText;
+                    alert(JSON.stringify(err));
+                });
+        });
+    </script>
+</body>
+
+</html>

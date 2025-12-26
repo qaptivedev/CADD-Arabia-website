@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CADD Arabia | Portfolio</title>
+    <link rel="icon" href="images/cadd_arabia_fav_icon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .page-header {
+            margin-top: 70px;
+            padding: 60px 0;
+            background-color: var(--light-gray);
+            text-align: center;
+        }
+
+        .portfolio-section {
+            padding: 80px 0;
+            border-bottom: 1px solid #eee;
+            scroll-margin-top: 70px;
+        }
+
+        .portfolio-section h2 {
+            font-size: 2.5rem;
+            color: var(--secondary-red);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 1.2rem;
+        }
+
+        .project-info {
+            padding: 20px;
+        }
+
+        .project-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .project-info p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/cadd_arabia_logo.png" alt="CADD Arabia">
+            </a>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <div class="dropdown">
+                    <a href="products.html" class="dropbtn">Products</a>
+                    <div class="dropdown-content">
+                        <!-- Security Systems -->
+                        <div class="dropdown-submenu">
+                            <a href="#">Security Systems</a>
+                            <div class="dropdown-content">
+                                <a href="products.html#salto">SALTO</a>
+                            </div>
+                        </div>
+                        <!-- Audio Visual -->
+                        <div class="dropdown-submenu">
+                            <a href="#">Audio Visual Solutions</a>
+                            <div class="dropdown-content">
+                                <a href="products.html#peoplelink">People Link</a>
+                                <a href="products.html#mvi">MVI</a>
+                            </div>
+                        </div>
+                        <!-- Networking -->
+                        <div class="dropdown-submenu">
+                            <a href="#">Networking & Infrastructure</a>
+                            <div class="dropdown-content">
+                                <!-- Active -->
+                                <div class="dropdown-submenu">
+                                    <a href="#">Active</a>
+                                    <div class="dropdown-content">
+                                        <a href="products.html#bdcom">BDCOM</a>
+                                    </div>
+                                </div>
+                                <!-- Passive -->
+                                <div class="dropdown-submenu">
+                                    <a href="#">Passive</a>
+                                    <div class="dropdown-content">
+                                        <a href="products.html#xelcon">Xelcon Networks UK</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio Dropdown -->
+                <!-- <div class="dropdown">
+                    <a href="portfolio.html" class="dropbtn" style="color: var(--secondary-red);">Portfolio</a>
+                    <div class="dropdown-content">
+                        <a href="portfolio.html#ongoing">Ongoing Projects</a>
+                        <a href="portfolio.html#done">Completed Projects</a>
+                    </div>
+                </div> -->
+                <a href="blog.html">News Feed</a>
+                <a href="index.html#solutions">Solutions</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Our Portfolio</h1>
+        </div>
+    </div>
+
+    <!-- Ongoing Projects -->
+    <section id="ongoing" class="portfolio-section">
+        <div class="container">
+            <h2>Ongoing Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">Project Image 1</div>
+                    <div class="project-info">
+                        <h3>City Center Mall Security Upgrade</h3>
+                        <p>Comprehensive upgrade of surveillance and access control systems for the new wing.</p>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">Project Image 2</div>
+                    <div class="project-info">
+                        <h3>Tech Park Network Infrastructure</h3>
+                        <p>Installation of high-speed active and passive networking components for 5-story office
+                            complex.</p>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">Project Image 3</div>
+                    <div class="project-info">
+                        <h3>Grand Hotel AV Solutions</h3>
+                        <p>Implementing state-of-the-art IPTV and conference room audio-visual systems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Completed Projects -->
+    <section id="done" class="portfolio-section" style="background-color: #fafafa;">
+        <div class="container">
+            <h2>Completed Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">Project Image 4</div>
+                    <div class="project-info">
+                        <h3>International Airport Terminal 3</h3>
+                        <p>Successfully deployed extensive fiber optic cabling and network switches across the terminal.
+                        </p>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">Project Image 5</div>
+                    <div class="project-info">
+                        <h3>University Campus Security</h3>
+                        <p>Installed over 500 SALTO electronic locks for student dormitories and administrative blocks.
+                        </p>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">Project Image 6</div>
+                    <div class="project-info">
+                        <h3>Corporate HQ Telepresence</h3>
+                        <p>Setup of PeopleLink video conferencing suites for executive boardrooms.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <img src="images/cadd_arabia_logo_white.png" alt="CADD Arabia">
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/company/caddarabia/" target="_blank">LinkedIn</a>
+                <a href="#">Twitter</a>
+                <a href="#">Facebook</a>
+            </div>
+            <div class="footer-contact">
+                <p>Contact Us</p>
+                <p>info@caddarabia.com<br>sales@caddarabia.com</p>
+            </div>
+            <!-- Location Map -->
+            <div class="footer-map">
+                <iframe
+                    src="https://maps.google.com/maps?q=25.289877869788718,51.51050736262315&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 CADD Arabia. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+
+</html>
