@@ -78,35 +78,14 @@ a {
     gap: 5px;
     margin-left: 30px;
 }
+
 .hamburger span {
     width: 25px;
     height: 3px;
     background-color: var(--text-dark);
     display: block;
 }
-/* Mobile styles */
-@media (max-width: 768px) {
-    .nav {
-        display: none;
-        flex-direction: column;
-        background-color: var(--primary-white);
-        position: absolute;
-        top: 70px;
-        right: 0;
-        width: 200px;
-        padding: 10px;
-        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
-    }
-    .nav a {
-        margin: 10px 0;
-    }
-    .hamburger {
-        display: flex;
-    }
-    .nav-open .nav {
-        display: flex;
-    }
-}
+
 
 /* Hero Slider */
 .hero-slider {
@@ -386,29 +365,6 @@ a {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-    .slide-content h1 {
-        font-size: 2rem;
-    }
-
-    .slide-content p {
-        font-size: 1rem;
-    }
-
-    .welcome-section h2 {
-        font-size: 1.8rem;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-
-    .footer-contact {
-        text-align: center;
-    }
-}
 
 /* Partners Section */
 .partners-section {
@@ -658,4 +614,64 @@ a {
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     color: white;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        background-color: var(--primary-white);
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav a {
+        margin: 10px 0;
+        display: block;
+    }
+
+    .dropdown {
+        margin-left: 0 !important;
+        width: 100%;
+    }
+
+    .dropbtn {
+        padding: 10px 0;
+        margin-left: 0 !important;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-open .nav {
+        display: flex;
+    }
+
+    .slide-content h1 {
+        font-size: 2rem;
+    }
+
+    .slide-content p {
+        font-size: 1rem;
+    }
+
+    .welcome-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-contact {
+        text-align: center;
+    }
 }
