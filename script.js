@@ -62,3 +62,18 @@ prevBtn.addEventListener('click', () => {
 
 // Auto slide
 slideTimer = setInterval(nextSlide, slideInterval);
+// Hamburger menu toggle
+const hamburger = document.querySelector('.hamburger');
+const header = document.querySelector('.header');
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        header.classList.toggle('nav-open');
+    });
+    // Close menu when a nav link is clicked
+    const navLinks = document.querySelectorAll('.nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            header.classList.remove('nav-open');
+        });
+    });
+}

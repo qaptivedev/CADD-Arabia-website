@@ -71,8 +71,41 @@ a {
     color: var(--text-dark);
 }
 
-.nav a:hover {
-    color: var(--secondary-red);
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    margin-left: 30px;
+}
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-dark);
+    display: block;
+}
+/* Mobile styles */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        background-color: var(--primary-white);
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    }
+    .nav a {
+        margin: 10px 0;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .nav-open .nav {
+        display: flex;
+    }
 }
 
 /* Hero Slider */

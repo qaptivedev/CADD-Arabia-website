@@ -17,7 +17,8 @@
         }
 
         .contact-container {
-            padding: 80px 0;
+            padding: 80px 20px;
+            /* Added 20px horizontal padding */
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 60px;
@@ -95,6 +96,13 @@
             .contact-container {
                 grid-template-columns: 1fr;
                 gap: 40px;
+                padding: 40px 15px;
+                /* Reduced vertical padding and adjusted horizontal for mobile */
+            }
+
+            .contact-form {
+                padding: 20px;
+                /* Reduced form padding on mobile */
             }
         }
     </style>
@@ -107,69 +115,72 @@
             <a href="index.html" class="logo">
                 <img src="images/cadd_arabia_logo.png" alt="CADD Arabia">
             </a>
-            <nav class="nav">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <div class="dropdown">
-                    <a href="products.html" class="dropbtn">Products</a>
-                    <div class="dropdown-content">
-                        <!-- Security Systems -->
-                        <div class="dropdown-submenu">
-                            <a href="#">Security Systems</a>
-                            <div class="dropdown-content">
-                                <a href="products.html#salto">SALTO</a>
-                            </div>
-                        </div>
-                        <!-- Audio Visual -->
-                        <div class="dropdown-submenu">
-                            <a href="#">Audio Visual Solutions</a>
-                            <div class="dropdown-content">
-                                <a href="products.html#peoplelink">People Link</a>
-                                <a href="products.html#mvi">MVI</a>
-                                <a href="products.html#stonewater">StoneWater</a>
-                            </div>
-                        </div>
-                        <!-- Networking -->
-                        <div class="dropdown-submenu">
-                            <a href="#">Networking & Infrastructure</a>
-                            <div class="dropdown-content">
-                                <!-- Active -->
-                                <div class="dropdown-submenu">
-                                    <a href="#">Active</a>
-                                    <div class="dropdown-content">
-                                        <a href="products.html#bdcom">BDCOM</a>
-                                    </div>
-                                </div>
-                                <!-- Passive -->
-                                <div class="dropdown-submenu">
-                                    <a href="#">Passive</a>
-                                    <div class="dropdown-content">
-                                        <a href="products.html#xelcon">Xelcon Networks UK</a>
-                                    </div>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+            <div class="nav-wrapper">
+                <nav class="nav">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <div class="dropdown">
+                        <a href="products.html" class="dropbtn">Products</a>
+                        <div class="dropdown-content">
+                            <!-- Security Systems -->
+                            <div class="dropdown-submenu">
+                                <a href="#">Security Systems</a>
+                                <div class="dropdown-content">
+                                    <a href="products.html#salto">SALTO</a>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Home Automation -->
-                        <div class="dropdown-submenu">
-                            <a href="#">Home Automation</a>
-                            <div class="dropdown-content">
-                                <a href="products.html#nexhome">NEXHOME</a>
+                            <!-- Audio Visual -->
+                            <div class="dropdown-submenu">
+                                <a href="#">Audio Visual Solutions</a>
+                                <div class="dropdown-content">
+                                    <a href="products.html#peoplelink">People Link</a>
+                                    <a href="products.html#mvi">MVI</a>
+                                    <a href="products.html#stonewater">StoneWater</a>
+                                </div>
+                            </div>
+                            <!-- Networking -->
+                            <div class="dropdown-submenu">
+                                <a href="#">Networking & Infrastructure</a>
+                                <div class="dropdown-content">
+                                    <!-- Active -->
+                                    <div class="dropdown-submenu">
+                                        <a href="#">Active</a>
+                                        <div class="dropdown-content">
+                                            <a href="products.html#bdcom">BDCOM</a>
+                                        </div>
+                                    </div>
+                                    <!-- Passive -->
+                                    <div class="dropdown-submenu">
+                                        <a href="#">Passive</a>
+                                        <div class="dropdown-content">
+                                            <a href="products.html#xelcon">Xelcon Networks UK</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Home Automation -->
+                            <div class="dropdown-submenu">
+                                <a href="#">Home Automation</a>
+                                <div class="dropdown-content">
+                                    <a href="products.html#nexhome">NEXHOME</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- Portfolio Dropdown -->
-                <!-- <div class="dropdown">
+                    <!-- Portfolio Dropdown -->
+                    <!-- <div class="dropdown">
                     <a href="portfolio.html" class="dropbtn">Portfolio</a>
                     <div class="dropdown-content">
                         <a href="portfolio.html#ongoing">Ongoing Projects</a>
                         <a href="portfolio.html#done">Completed Projects</a>
                     </div>
                 </div> -->
-                <a href="blog.html">News Feed</a>
-                <a href="index.html#solutions">Solutions</a>
-                <a href="contact.html" style="color: var(--secondary-red);">Contact</a>
-            </nav>
+                    <a href="blog.html">News Feed</a>
+                    <a href="index.html#solutions">Solutions</a>
+                    <a href="contact.html" style="color: var(--secondary-red);">Contact</a>
+                </nav>
+            </div>
         </div>
     </header>
 
@@ -260,7 +271,7 @@
             &copy; 2025 CADD Arabia. All rights reserved.
         </div>
     </footer>
-
+    <script src="script.js"></script>
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
