@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CADD Arabia | BDCOM</title>
+    <link rel="icon" href="images/cadd_arabia_fav_icon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+
+    <style>
+        .page-header {
+            margin-top: 70px;
+            padding: 80px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/page_header_bg.png') no-repeat center center/cover;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .page-header h1 {
+            color: #ffffff;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .text-section {
+            padding: 15px 0;
+        }
+
+        .text-section h2 {
+            font-size: 2rem;
+            color: var(--secondary-red);
+            margin-bottom: 15px;
+        }
+
+        .text-section p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .icon-wrapper {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .partner-card i {
+            width: 36px;
+            height: 36px;
+            color: #0b1f3a;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            /* stack icon + text vertically */
+            align-items: center;
+            /* center horizontally */
+            justify-content: center;
+            text-align: center;
+            gap: 10px;
+            /* space between icon and text */
+        }
+
+        .card i {
+            width: 40px;
+            height: 40px;
+        }
+
+        .card p {
+            margin: 0;
+        }
+
+        .partner-card {
+            width: 220px;
+            /* fixed width for uniform layout */
+            background: #fff;
+            padding: 25px 20px;
+            border-radius: 10px;
+            border: 1px solid #eee;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            gap: 12px;
+            transition: 0.3s ease;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            justify-items: center;
+            /* center last row properly */
+        }
+
+        .partner-card p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.5;
+            text-align: center;
+            max-width: 160px;
+            /* prevents awkward wrapping */
+        }
+
+        .partner-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 800px;
+            margin: 20px auto;
+            align-items: center;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .contact-form button {
+            width: 100%;
+            background-color: var(--secondary-red);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: var(--accent-red-hover);
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/cadd_arabia_logo.png" alt="CADD Arabia">
+            </a>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+            <div class="nav-wrapper">
+                <nav class="nav">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <div class="dropdown">
+                        <a href="products.html" class="dropbtn">Products</a>
+                        <div class="dropdown-content">
+                            <!-- Security Systems -->
+                            <div class="dropdown-submenu">
+                                <a href="#">Security Systems</a>
+                                <div class="dropdown-content">
+                                    <a href="products.html#salto">SALTO</a>
+                                </div>
+                            </div>
+                            <!-- Audio Visual -->
+                            <div class="dropdown-submenu">
+                                <a href="#">Audio Visual Solutions</a>
+                                <div class="dropdown-content">
+                                    <a href="products.html#peoplelink">People Link</a>
+                                    <a href="products.html#mvi">MVI</a>
+                                    <a href="products.html#stonewater">StoneWater</a>
+                                </div>
+                            </div>
+                            <!-- Networking -->
+                            <div class="dropdown-submenu">
+                                <a href="#">Networking & Infrastructure</a>
+                                <div class="dropdown-content">
+                                    <!-- Active -->
+                                    <div class="dropdown-submenu">
+                                        <a href="#">Active</a>
+                                        <div class="dropdown-content">
+                                            <a href="products.html#bdcom">BDCOM</a>
+                                        </div>
+                                    </div>
+                                    <!-- Passive -->
+                                    <div class="dropdown-submenu">
+                                        <a href="#">Passive</a>
+                                        <div class="dropdown-content">
+                                            <a href="products.html#xelcon">Xelcon Networks UK</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Home Automation -->
+                            <div class="dropdown-submenu">
+                                <a href="#">Home Automation</a>
+                                <div class="dropdown-content">
+                                    <a href="products.html#nexhome">NEXHOME</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="blog.html">News Feed</a>
+                    <a href="index.html#solutions">Solutions</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>BDCOM</h1>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- ABOUT -->
+        <section class="text-section">
+            <h2>Reliable Networking for Critical Infrastructure</h2>
+            <p>We deliver BDCOM networking solutions approved for Qatar infrastructure projects. With local support,
+                fast delivery, and engineering expertise, we ensure seamless execution.</p>
+            <p>BDCOM is a globally recognized provider of advanced networking solutions, specializing in
+                high-performance switching and wireless technologies. In Qatar, BDCOM switching solutions are approved
+                by MOI-SSD and listed under Ashghal AVL, making them a trusted choice for consultants, contractors, and
+                system integrators involved in critical infrastructure projects.
+
+                In addition to switching, BDCOM offers a comprehensive range of wireless (WiFi) solutions designed for
+                enterprise and commercial environments, ensuring reliable and high-speed connectivity.
+
+                All BDCOM solutions are locally supplied and supported by CADD Arabia Qatar, providing clients with fast
+                delivery, expert technical guidance, and dependable after-sales support.</p>
+        </section>
+
+        <!-- WHY -->
+        <section class="text-section">
+            <h2 style="margin-bottom: 25px;">Why Choose BDCOM, Why CADD Arabia</h2>
+            <ul class="grid-2" style="list-style: none; padding: 0;">
+                <li
+                    style="background: #FAFAFA; border-left: 4px solid var(--secondary-red); padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h3
+                        style="font-size: 1.3rem; margin-bottom: 12px; color: var(--text-dark); display: flex; align-items: center; gap: 12px;">
+                        <span style="color: var(--secondary-red); font-size: 1.4rem;">✔</span> MOI-SSD Approved
+                    </h3>
+                    <p style="margin: 0; font-size: 1.05rem; color: #666; line-height: 1.6;">Compliance with the highest
+                        security and surveillance standards in Qatar.</p>
+                </li>
+                <li
+                    style="background: #FAFAFA; border-left: 4px solid var(--secondary-red); padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h3
+                        style="font-size: 1.3rem; margin-bottom: 12px; color: var(--text-dark); display: flex; align-items: center; gap: 12px;">
+                        <span style="color: var(--secondary-red); font-size: 1.4rem;">✔</span> Ashghal AVL Listed
+                    </h3>
+                    <p style="margin: 0; font-size: 1.05rem; color: #666; line-height: 1.6;">Trusted solutions for
+                        public works and critical infrastructure.</p>
+                </li>
+                <li
+                    style="background: #FAFAFA; border-left: 4px solid var(--secondary-red); padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h3
+                        style="font-size: 1.3rem; margin-bottom: 12px; color: var(--text-dark); display: flex; align-items: center; gap: 12px;">
+                        <span style="color: var(--secondary-red); font-size: 1.4rem;">✔</span> Local Technical Support
+                    </h3>
+                    <p style="margin: 0; font-size: 1.05rem; color: #666; line-height: 1.6;">Expert engineering and
+                        support right here in Qatar when you need it.</p>
+                </li>
+                <li
+                    style="background: #FAFAFA; border-left: 4px solid var(--secondary-red); padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h3
+                        style="font-size: 1.3rem; margin-bottom: 12px; color: var(--text-dark); display: flex; align-items: center; gap: 12px;">
+                        <span style="color: var(--secondary-red); font-size: 1.4rem;">✔</span> Layer 2 & Layer 3
+                        Switching
+                    </h3>
+                    <p style="margin: 0; font-size: 1.05rem; color: #666; line-height: 1.6;">High-performance switching
+                        for scalable networks.</p>
+                </li>
+
+                <li
+                    style="background: #FAFAFA; border-left: 4px solid var(--secondary-red); padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h3
+                        style="font-size: 1.3rem; margin-bottom: 12px; color: var(--text-dark); display: flex; align-items: center; gap: 12px;">
+                        <span style="color: var(--secondary-red); font-size: 1.4rem;">✔</span> Indoor & Outdoor WiFi
+                        Solutions
+                    </h3>
+                    <p style="margin: 0; font-size: 1.05rem; color: #666; line-height: 1.6;">Reliable connectivity for
+                        every environment.</p>
+                </li>
+
+                <li
+                    style="background: #FAFAFA; border-left: 4px solid var(--secondary-red); padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h3
+                        style="font-size: 1.3rem; margin-bottom: 12px; color: var(--text-dark); display: flex; align-items: center; gap: 12px;">
+                        <span style="color: var(--secondary-red); font-size: 1.4rem;">✔</span> WiFi 7 Technology
+                    </h3>
+                    <p style="margin: 0; font-size: 1.05rem; color: #666; line-height: 1.6;">Next-generation speed and
+                        wireless performance.</p>
+                </li>
+
+                <li
+                    style="background: #FAFAFA; border-left: 4px solid var(--secondary-red); padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h3
+                        style="font-size: 1.3rem; margin-bottom: 12px; color: var(--text-dark); display: flex; align-items: center; gap: 12px;">
+                        <span style="color: var(--secondary-red); font-size: 1.4rem;">✔</span> Competitive Pricing
+                    </h3>
+                    <p style="margin: 0; font-size: 1.05rem; color: #666; line-height: 1.6;">Better value compared to
+                        tier-1 brands.</p>
+                </li>
+
+                <li
+                    style="background: #FAFAFA; border-left: 4px solid var(--secondary-red); padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h3
+                        style="font-size: 1.3rem; margin-bottom: 12px; color: var(--text-dark); display: flex; align-items: center; gap: 12px;">
+                        <span style="color: var(--secondary-red); font-size: 1.4rem;">✔</span> Fast Delivery
+                    </h3>
+                    <p style="margin: 0; font-size: 1.05rem; color: #666; line-height: 1.6;">Quick availability to keep
+                        your project on track.</p>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- SOLUTIONS -->
+    <section class="solutions-section">
+        <div class="container">
+            <h2 style="margin-bottom: 40px; font-size: 2rem; color: var(--secondary-red);">Our Solutions</h2>
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="card-header">
+                        <h3>Network Switching</h3>
+                    </div>
+                    <div class="card-body">
+                        <p style="margin: 0; font-size: 1.05rem; margin-bottom: 15px;">Layer 2 & 3 switches, Industrial
+                            switches for diverse environments and needs.</p>
+                        <div style="display: flex; flex-direction: column; gap: 8px;">
+                            <div style="display: flex; align-items: center; gap: 10px;"><span
+                                    style="color: var(--secondary-red); font-size: 1.2rem;">✔</span> Managed & Unmanaged
+                                Switches</div>
+                            <div style="display: flex; align-items: center; gap: 10px;"><span
+                                    style="color: var(--secondary-red); font-size: 1.2rem;">✔</span> Layer 2 & Layer 3
+                                Switches</div>
+                            <div style="display: flex; align-items: center; gap: 10px;"><span
+                                    style="color: var(--secondary-red); font-size: 1.2rem;">✔</span> Industrial Ethernet
+                                Switches</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="solution-card">
+                    <div class="card-header">
+                        <h3>WiFi Solutions</h3>
+                    </div>
+                    <div class="card-body">
+                        <p style="margin: 0; font-size: 1.05rem; margin-bottom: 15px;">Indoor & Outdoor Access Points
+                            featuring the latest WiFi 6/7 technologies.</p>
+                        <div style="display: flex; flex-direction: column; gap: 8px;">
+                            <div style="display: flex; align-items: center; gap: 10px;"><span
+                                    style="color: var(--secondary-red); font-size: 1.2rem;">✔</span> Indoor Access
+                                Points</div>
+                            <div style="display: flex; align-items: center; gap: 10px;"><span
+                                    style="color: var(--secondary-red); font-size: 1.2rem;">✔</span> Outdoor Access
+                                Points</div>
+                            <div style="display: flex; align-items: center; gap: 10px;"><span
+                                    style="color: var(--secondary-red); font-size: 1.2rem;">✔</span> WiFi 6 & WiFi 7
+                                Technology</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- APPLICATIONS -->
+    <section class="partners-section">
+        <div class="container">
+            <h2 class="section-title">Applications Across Qatar</h2>
+
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <div class="icon-wrapper">
+                        <i data-lucide="earth"></i>
+                    </div>
+                    <p>Ashghal Infrastructure Projects (Switching) </p>
+                </div>
+
+                <div class="partner-card">
+                    <div class="icon-wrapper">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <p>MOI Security Systems (Switching)</p>
+                </div>
+
+                <div class="partner-card">
+                    <div class="icon-wrapper">
+                        <i data-lucide="building"></i>
+                    </div>
+                    <p>Commercial Buildings</p>
+                </div>
+
+                <div class="partner-card">
+                    <div class="icon-wrapper">
+                        <i data-lucide="wifi"></i>
+                    </div>
+                    <p>Hospitality & Retail WiFi Networks</p>
+                </div>
+
+                <div class="partner-card">
+                    <div class="icon-wrapper">
+                        <i data-lucide="graduation-cap"></i>
+                    </div>
+                    <p>Educational Institutions</p>
+                </div>
+
+                <div class="partner-card">
+                    <div class="icon-wrapper">
+                        <i data-lucide="factory"></i>
+                    </div>
+                    <p>Industrial Networks</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- CONTACT -->
+        <section class="text-section" style="margin-bottom: 40px; padding-top: 40px;">
+            <h2>Start Your Project Today</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Name" required>
+                <input type="text" placeholder="Company Name">
+                <input type="tel" placeholder="Phone Number">
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Project Details" rows="4"></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <img src="images/cadd_arabia_logo_white.png" alt="CADD Arabia">
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/company/caddarabia/" target="_blank">LinkedIn</a>
+                <a href="#">Twitter</a>
+                <a href="#">Facebook</a>
+            </div>
+            <div class="footer-contact">
+                <p>Contact Us</p>
+                <p>info@caddarabia.com<br>sales@caddarabia.com</p>
+            </div>
+            <!-- Location Map -->
+            <div class="footer-map">
+                <iframe
+                    src="https://maps.google.com/maps?q=25.289877869788718,51.51050736262315&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 CADD Arabia. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.378.0/dist/umd/lucide.min.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
