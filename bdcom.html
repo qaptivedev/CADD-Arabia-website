@@ -447,21 +447,28 @@
         </div>
     </section>
 
-    <div class="container">
-        <!-- CONTACT -->
-        <section class="text-section" style="margin-bottom: 40px; padding-top: 40px;">
-            <h2>Start Your Project Today</h2>
-            <form class="contact-form">
-                <input type="text" placeholder="Name" required>
-                <input type="text" placeholder="Company Name">
-                <input type="tel" placeholder="Phone Number">
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Project Details" rows="4"></textarea>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-        </section>
+<div class="container">
+    <!-- CONTACT -->
+    <section class="text-section" style="margin-bottom: 40px; padding-top: 40px;">
+        <h2>Start Your Project Today</h2>
 
-    </div>
+        <form id="contact-form" class="contact-form">
+
+            <input type="text" name="from_name" placeholder="Full Name" required>
+
+            <input type="text" name="company" placeholder="Company Name" required>
+
+            <input type="tel" name="phone" placeholder="Phone Number" required pattern="[0-9+ ]{7,15}">
+
+            <input type="email" name="from_email" placeholder="Email Address" required>
+
+            <textarea name="message" placeholder="Project Details / Requirements" rows="4" required></textarea>
+
+            <button type="submit" class="submit-btn">Submit Enquiry</button>
+
+        </form>
+    </section>
+</div>
 
     <!-- Footer -->
     <footer class="footer" id="contact">
@@ -496,6 +503,42 @@
     <script>
         lucide.createIcons();
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </body>
 
 </html>
+
+
+<!-- Send Message Email JS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+(function () {
+    emailjs.init('OFdqFZrk5z1Mnhl5U');
+})();
+
+document.getElementById('contact-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const serviceID = 'service_yvq4uhn';
+    const templateID = 'template_wsfwhyd';
+
+    const btn = this.querySelector('.submit-btn');
+    const originalText = btn.innerText;
+
+    btn.innerText = 'Sending...';
+
+    emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+            btn.innerText = originalText;
+            alert('Message sent successfully!');
+            this.reset();
+        })
+        .catch((err) => {
+            btn.innerText = originalText;
+            console.error('EmailJS Error:', err);
+            alert('Failed to send message');
+        });
+});
+</script>
